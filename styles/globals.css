@@ -1,3 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black;
+  }
+}
+
+@layer components {
+  .hoverAnimation {
+    @apply h-[52px] w-[52px] cursor-pointer rounded-full hover:bg-[#d9d9d9] hover:bg-opacity-20 xl:h-auto xl:w-auto xl:py-3 xl:px-4 transition duration-[250ms] ease-out;
+  }
+
+  .profilePicture {
+    @apply h-10 w-10 rounded-full xl:mr-2.5;
+  }
+
+  .icon {
+    @apply cursor-pointer w-9 h-9 hover:bg-[#1d9bf0] hover:bg-opacity-20 flex items-center justify-center rounded-full transition ease-out
+  }
+
+  .main {
+    @apply max-w-2xl flex-grow border-l border-r border-gray-700 text-white sm:ml-[73px] xl:ml-[370px]
+  }
+
+  .image-container {
+    @apply w-full flex pt-3;
+
+    > span {
+      position: unset !important;
+    }
+
+    .image {
+      @apply object-contain rounded-[1.5rem];
+      width: 100% !important;
+      position: relative !important;
+      height: unset !important;
+      max-height: 500px !important;
+    }
+  }
+}
